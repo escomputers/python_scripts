@@ -1,0 +1,22 @@
+[
+    {
+        "name": "device1",
+        "id": "41444442840d8e97bdd5",
+        "key": "8e0551d4e689a3ed"
+    },
+    {
+        "name": "device2",
+        "id": "41444442840d8e9bd11f",
+        "key": "199ac1a3cafdb853"
+    },
+    {
+        "name": "device3",
+        "id": "41444442840d8e9bd719",
+        "key": "9c9d54623f4cdc8f"
+    },
+    {
+        "name": "device4",
+        "id": "41444442840d8e97bdcf",
+        "key": "5cd189b1c2224cb7"
+    }
+]
