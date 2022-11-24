@@ -5,32 +5,9 @@ import time
 import json
 import threading
 import pytz
-from datetime import datetime
+from datetime import datetime, timedelta
 
 alarmStartTime = datetime.strptime('21:30', '%H:%M')
-alarmEndTime = datetime.strptime('8:30', '%H:%M')
-
-
-def sensoreAperto():
-    #WRITE THE STATUS CHANGE INTO XML FILE TO UPDATE VALUE ON ZWAY SERVER
-    datafile = '/opt/z-way-server/htdocs/sensor1.xml'
-    tree = ET.parse(datafile)
-    root = tree.getroot()
-    for child in root:
-        #print(child.text)
-        child.text = 'on'
-    tree.write(datafile)
-
-
-def sensoreChiuso():
-    #WRITE THE STATUS CHANGE INTO XML FILE TO UPDATE VALUE ON ZWAY SERVER
-    datafile = '/opt/z-way-server/htdocs/sensor1.xml'
-    tree = ET.parse(datafile)
-    root = tree.getroot()
-    for child in root:
-        #print(child.text)
-        child.text = 'off'
-    tree.write(datafile)
 
 
 def controllo_stato_allarme():
@@ -50,8 +27,7 @@ def main():
     now = (datetime.now(tmzone))
 
     start = now.replace(hour=alarmStartTime.hour, minute=alarmStartTime.minute)
-    end = now.replace(hour=alarmStartTime.hour, minute=alarmStartTime.minute)
-
+    end = (start + timedelta(hours=11))
     if now >= start and now <= end:  # yes
         controllo_stato_allarme()
 
