@@ -1,7 +1,5 @@
 #!/bin/python3
-import xml.etree.ElementTree as ET
 import requests
-import time
 import json
 import threading
 import pytz
