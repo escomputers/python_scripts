@@ -3,7 +3,7 @@ import time
 
 #chiama
 client = AMIClient(address='13.38.90.239',port=5038)
-client.login(username='admin',secret='6c62b5914cfc147d87f624ea3f3358b8')
+client.login(username='admin',secret='')
 
 
 action = SimpleAction(
