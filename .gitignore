@@ -1,6 +1,6 @@
 .DS_Store
-vault_data.txt
 *.bkp
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,19 +1,22 @@
 from asterisk.ami import *
 import time
+from modules import call1
+
+time.sleep(5)
+#print("making second call..")
 
 #chiama
-client = AMIClient(address='13.38.90.239',port=5038)
-client.login(username='admin',secret='')
-
+client = AMIClient(address='',port=5038)
+client.login(username='',secret='')
 
 action = SimpleAction(
     'Originate',
-    Channel='SIP/Messagenet09321846766/3936926490', #per chiamate esterne usando un trunk
-    Exten='3000',               #numero chiamante
+    Channel='SIP/***************/**********', #per chiamate esterne usando un trunk
+    Exten='2000',               #numero chiamante
     Priority=1,
     #Context='default',
     Context='from-internal',
-    CallerID='Allarme-Ufficio',
+    CallerID='Prova',
 )
 
 client.send_action(action)
