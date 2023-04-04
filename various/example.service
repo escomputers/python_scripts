@@ -1,0 +1,14 @@
+[Unit]
+Description=Reading sensors data with python
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=python /root/hassio-growbox/sensors/threadManager.py
+WorkingDirectory=/root/hassio-growbox/sensors
+Environment=PYTHONPATH=/root/hassio-growbox/env/lib/python3.9/site-packages
+Restart=on-failure
+EnvironmentFile=/etc/environment
+
+[Install]
+WantedBy=multi-user.target
