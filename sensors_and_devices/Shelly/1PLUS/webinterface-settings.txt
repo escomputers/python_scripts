@@ -1,0 +1,5 @@
+OUTPUT
+Action on power on = ON
+
+INPUT
+Mode = attached switch
