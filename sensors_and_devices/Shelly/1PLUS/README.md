@@ -1,9 +1,11 @@
 ### Shelly web interface settings
 
 OUTPUT
+
 Action on power on = ON
 
 INPUT
+
 Mode = attached switch
 
 ### wiring as simple switch ON/OFF
