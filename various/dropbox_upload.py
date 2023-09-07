@@ -1,11 +1,12 @@
 import sys
 import dropbox
+import os
 
 from dropbox.files import WriteMode
 from dropbox.exceptions import ApiError, AuthError
 
 # Access token
-TOKEN = 'sl.BQHOKD8WI-go-ejwksxRYiexT6LD33odMGic4C28vwRBfUYiasNu2RWh5eZwcLfT-4k5ia6OM7AyyuYDMIqivrbu4M1hw80d_4uII-6MPltoG7CItSSB92mLtAJULm3hBgyBkKw'
+TOKEN = os.getenv('DROPBOX_TOKEN')
 
 LOCALFILE = 'sec.zip'
 BACKUPPATH = '/sec.zip' # Keep the forward slash before destination filename
