@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # import the necessary packages
-import smtplib, re, os, sys
+import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
